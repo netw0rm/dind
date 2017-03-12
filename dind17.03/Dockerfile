@@ -1,7 +1,7 @@
 FROM docker:17.03-dind
 
-COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh	&& \
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh	&& \
     apk add --no-cache python			&& \
     wget https://bootstrap.pypa.io/get-pip.py	&& \
     python get-pip.py				&& \
